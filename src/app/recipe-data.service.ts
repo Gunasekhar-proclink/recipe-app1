@@ -17,6 +17,9 @@ export type recipe = {
   providedIn: 'root',
 })
 export class RecipeDataService {
+  getRecipeByIdP(id: string) {
+    throw new Error('Method not implemented.');
+  }
 
   recipeData: Array<recipe> = [
     { 

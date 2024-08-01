@@ -24,10 +24,11 @@ export class RecipecardComponent {
   constructor(public recepinfo: RecipeDataService, private router: Router) {}
 
   openRecipeOverview() {
-    this.router.navigate(['/overview', this.item.itemTitle]);
+    this.router.navigate(['/overview', this.item.id]);
   }
   
   @Input() item = {
+    id : '' , 
     itemTitle: 'Chicken Biriyani',
     itemposter:
       'https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/4:3/w_5100,h_3825,c_limit/RoastChicken_RECIPE_080420_37993.jpg',

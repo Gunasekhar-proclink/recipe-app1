@@ -15,11 +15,15 @@ export const routes: Routes = [
     path: 'recipes',
     component: DashboardComponent,
   },
+<<<<<<< HEAD
   {
     path: 'add-recipes',
     component: AddRecipeComponent,
   },
   { path: 'overview/:title', component: RecipeOverviewComponent },
+=======
+  { path: 'overview/:id', component: RecipeOverviewComponent },
+>>>>>>> 41fbc7a881378aed270f8de2479fca251ab51e15
   {
     path: 'overview',
     component: RecipeOverviewComponent,
