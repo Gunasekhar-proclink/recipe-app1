@@ -14,7 +14,7 @@ export const routes: Routes = [
     path: 'recipes',
     component: DashboardComponent,
   },
-  { path: 'overview/:title', component: RecipeOverviewComponent },
+  { path: 'overview/:id', component: RecipeOverviewComponent },
   {
     path: 'overview',
     component: RecipeOverviewComponent,
