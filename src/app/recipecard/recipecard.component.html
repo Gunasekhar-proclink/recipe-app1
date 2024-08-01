@@ -21,6 +21,15 @@
           ><span class="material-symbols-outlined"> info</span></mat-icon
         >
       </button>
+
+      <button
+        mat-icon-button
+        aria-label="Delete Recipe"
+        color="warn"
+        (click)="deleteRecipe()"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
     </div>
   </mat-card-content>
 </mat-card>

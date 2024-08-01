@@ -13,14 +13,27 @@ import { SearchComponent } from '../search/search.component';
 export class DashboardComponent {
   allitems: Array<recipe> = [];
   filteredItems: Array<recipe> = [];
+  msg = '';
 
   updateFilteredItems(items: Array<recipe>) {
     this.filteredItems = items;
   }
-  constructor(
-    private recipeservice: RecipeDataService,
-  ) {
+  constructor(private recipeservice: RecipeDataService) {
     this.allitems = this.recipeservice.recipeData;
   }
 
+  loadRecipes() {
+    this.recipeservice
+      .getAllRecipesP()
+      .then((data) => {
+        this.allitems = data;
+      })
+      .catch(() => {
+        this.msg = 'Something went wrong';
+      });
+  }
+
+  deleteRecipeItem(item: recipe) {
+    this.recipeservice.deleteRecipeP(item).then(() => this.loadRecipes());
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from '../app.component';
@@ -21,13 +21,15 @@ import { Router } from '@angular/router';
   styleUrl: './recipecard.component.scss',
 })
 export class RecipecardComponent {
+  RecipeDataService: any;
   constructor(public recepinfo: RecipeDataService, private router: Router) {}
 
   openRecipeOverview() {
     this.router.navigate(['/overview', this.item.itemTitle]);
   }
-  
+
   @Input() item = {
+    id: 1,
     itemTitle: 'Chicken Biriyani',
     itemposter:
       'https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/4:3/w_5100,h_3825,c_limit/RoastChicken_RECIPE_080420_37993.jpg',
@@ -43,7 +45,7 @@ export class RecipecardComponent {
       'Chicken, basmati rice, yogurt, ginger, garlic, onions, ghee, cooking oil, spices',
   };
 
-  hidden = false;
+  hidden = true;
 
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;
@@ -52,5 +54,14 @@ export class RecipecardComponent {
   like = 0;
   likeIncreament() {
     this.like += 1;
+  }
+
+  //  @Input() id!: string;
+
+  @Output() deleteRecipeEvent = new EventEmitter<any>();
+
+  deleteRecipe() {
+    console.log('delete');
+    this.deleteRecipeEvent.emit(this.item);
   }
 }

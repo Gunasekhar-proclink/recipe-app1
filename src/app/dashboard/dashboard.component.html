@@ -8,7 +8,10 @@
   @if (filteredItems.length === 0) {
   <div class="recipe-list-container">
     @for (item of allitems; track $index) {
-    <app-recipecard [item]="item" />
+    <app-recipecard
+      [item]="item"
+      (deleteRecipeEvent)="deleteRecipeItem(item)"
+    />
     }
   </div>
   } @else {
@@ -18,4 +21,13 @@
     }
   </div>
   }
+  <div class="delete-recipe">
+    @for (item of allitems ; track $index ) {
+    <app-recipecard
+      [item]="item"
+      (deleteRecipeEvent)="deleteRecipeItem(item)"
+      [id]="item.id"
+    />
+    }
+  </div>
 </body>
