@@ -12,14 +12,21 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: './search.component.scss',
 })
 export class SearchComponent {
-  allItems: Array<recipe>;
+  
+  allItems!: Array<recipe>;
   filteredItems: Array<recipe> = [];
   searchText: string = ' ';
 
   @Output() filteredItemsChange = new EventEmitter<Array<recipe>>();
 
   constructor(private recipeService: RecipeDataService) {
-    this.allItems = this.recipeService.recipeData;
+     // this.allItems = this.recipeService.recipeData;
+  }
+  ngOnInit() {
+    this.loadRecipies();
+  }
+  loadRecipies() {
+    this.recipeService.getAllRecipesP().then((data) => (this.allItems = data));
   }
 
   search() {

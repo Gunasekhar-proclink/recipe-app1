@@ -1,1 +1,80 @@
-<p>add-recipe works!</p>
+<!-- Todo -->
+<form
+  [formGroup]="recipeForm"
+  (ngSubmit)="addRecipes()"
+  class="add-recipe-form"
+>
+  <mat-form-field>
+    <mat-label>Item Template</mat-label>
+    <input
+      matInput
+      placeholder="Ex: Chicken Biryani"
+      formControlName="itemTitle"
+    />
+
+    @if(itemTitle?.touched && itemTitle?.hasError('required') ){
+    <mat-error>Name is <strong>required</strong></mat-error>
+    } @if(itemTitle?.touched && itemTitle?.hasError('minlength') ){
+    <mat-error>Please provide full name 😁</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Poster</mat-label>
+    <input matInput placeholder="http://" formControlName="itemposter" />
+
+    @if(itemposter?.touched && itemposter?.hasError('required') ){
+    <mat-error>Name is <strong>required</strong></mat-error>
+    } @if(itemposter?.touched && itemposter?.hasError('minlength') ){
+    <mat-error>Please start with https:// 😁</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Image</mat-label>
+    <input matInput placeholder="http://" formControlName="itemImage" />
+
+    @if(itemImage?.touched && itemImage?.hasError('required') ){
+    <mat-error>Name is <strong>required</strong></mat-error>
+    } @if(itemImage?.touched && itemImage?.hasError('minlength') ){
+    <mat-error>Please start with https:// 😁</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Type</mat-label>
+    <input matInput placeholder="Hi" formControlName="itemType" />
+    <mat-error>Type is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Duration</mat-label>
+    <input matInput placeholder="Ex: 1 Hour" formControlName="itemDuration" />
+    <mat-error>Duration is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Link</mat-label>
+    <input matInput placeholder="http://" formControlName="itemLink" />
+
+    @if(itemLink?.touched && itemLink?.hasError('required') ){
+    <mat-error>Name is <strong>required</strong></mat-error>
+    } @if(itemLink?.touched && itemLink?.hasError('minlength') ){
+    <mat-error>Please start with https:// 😁</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Procedure</mat-label>
+    <input matInput placeholder="text" formControlName="itemProcedure" />
+    <mat-error>Procedure is <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Item Ingredients</mat-label>
+    <input matInput placeholder="Ex: Ginger" formControlName="itemIngredients" />
+    <mat-error>Ingredients <strong>required</strong></mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Add Recipe</button>
+</form>

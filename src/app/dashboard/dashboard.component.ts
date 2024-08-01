@@ -17,10 +17,14 @@ export class DashboardComponent {
   updateFilteredItems(items: Array<recipe>) {
     this.filteredItems = items;
   }
-  constructor(
-    private recipeservice: RecipeDataService,
-  ) {
-    this.allitems = this.recipeservice.recipeData;
+  constructor(private recipeservice: RecipeDataService) {
+    // this.allitems = this.recipeservice.recipeData;
   }
+  ngOnInit() {
+    this.loadRecipies();
+  }
+  loadRecipies() {
+    this.recipeservice.getAllRecipesP().then((data) => (this.allitems = data));
 
+}
 }
