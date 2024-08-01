@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { NewRecipe } from '../recipe';
 
 export type recipe = {
   itemTitle: string;
@@ -235,4 +236,22 @@ export class RecipeDataService {
   ];
 
   constructor() {}
+
+  
+  addRecipe(newRecipe: NewRecipe) {
+
+    // Post
+    // 1. method
+    // 2. body - Data & JSON
+    // 3. Header - JSON
+
+    return fetch(`https://669a424b9ba098ed61fef5da.mockapi.io/Recipes`, {
+      method: 'POST',
+      body: JSON.stringify(newRecipe),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }).then((res) => res.json());
+  }
+
 }

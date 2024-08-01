@@ -5,6 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RecipeOverviewComponent } from "./recipe-overview/recipe-overview.component";
 
+
+export interface IRecipe {
+  id: string;
+  name: string;
+  poster: string;
+  rating: number;
+  summary: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,4 +21,6 @@ import { RecipeOverviewComponent } from "./recipe-overview/recipe-overview.compo
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  recipe: Array<IRecipe> = [];
+}
