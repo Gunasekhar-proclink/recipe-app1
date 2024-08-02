@@ -37,3 +37,4 @@ export class DashboardComponent {
     this.recipeservice.deleteRecipeP(item).then(() => this.loadRecipes());
   }
 }
+}

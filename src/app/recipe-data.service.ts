@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
+import { NewRecipe } from '../recipe';
 
 export type recipe = {
+<<<<<<< HEAD
   id: number;
+=======
+  id : string 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
   itemTitle: string;
   itemposter: string;
   itemImage: string;
@@ -16,9 +21,18 @@ export type recipe = {
   providedIn: 'root',
 })
 export class RecipeDataService {
+  getRecipeByIdP(id: string) {
+    throw new Error('Method not implemented.');
+  }
+
   recipeData: Array<recipe> = [
+<<<<<<< HEAD
     {
       id: 1,
+=======
+    { 
+      id : '1', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: ' Chicken Biriyani',
       itemposter:
         'https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg',
@@ -34,7 +48,11 @@ export class RecipeDataService {
         'Chicken, basmati rice, yogurt, ginger, garlic, onions, ghee, cooking oil, spices',
     },
     {
+<<<<<<< HEAD
       id: 2,
+=======
+      id : '2', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Chicken Korma',
       itemType: 'Non-Veg',
       itemDuration: '1 hour',
@@ -50,7 +68,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 3,
+=======
+      id : '3', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Mughali Chicken',
       itemType: 'Non-Veg',
       itemDuration: '1 hour',
@@ -66,7 +88,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 4,
+=======
+      id : '4', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Tandoori Chicken Thighs',
       itemType: 'Non-Veg',
       itemDuration: '30 minutes',
@@ -81,7 +107,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 5,
+=======
+      id : '5', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Chicken Tikka Masala',
       itemType: 'Non-Veg',
       itemDuration: '1 hour',
@@ -97,7 +127,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 6,
+=======
+      id : '6', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Butter Chicken',
       itemType: 'Non-Veg',
       itemDuration: '1 hour',
@@ -111,7 +145,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 7,
+=======
+      id : '7', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Lamb Curry',
       itemType: 'Non-Veg',
       itemDuration: '1 hour',
@@ -126,7 +164,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 8,
+=======
+      id : '8', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Saag Paneer',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -141,7 +183,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 9,
+=======
+      id : '9', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Chana Masala',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -156,7 +202,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 10,
+=======
+      id : '10', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Aloo Gobi',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -172,7 +222,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 11,
+=======
+      id : '11', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Vegetable Biryani',
       itemType: 'Veg',
       itemDuration: '1 hour',
@@ -188,7 +242,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 12,
+=======
+      id : '12', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Gobi Manchurian',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -203,7 +261,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 13,
+=======
+      id : '13', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Bread Machine Naan',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -218,7 +280,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 14,
+=======
+      id : '14', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Coconut Burfi Brownie Bites',
       itemType: 'Veg',
       itemDuration: '30 minutes',
@@ -234,7 +300,11 @@ export class RecipeDataService {
         'https://www.youtube.com/watch?v=95BCU1n268w&ab_channel=SpiceEats',
     },
     {
+<<<<<<< HEAD
       id: 15,
+=======
+      id : '15', 
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
       itemTitle: 'Kulfi',
       itemType: 'Veg',
       itemDuration: '1 hour',
@@ -251,12 +321,23 @@ export class RecipeDataService {
   ];
 
   constructor() {}
+<<<<<<< HEAD
 
+=======
+  
+
+  getRecipesByIdP(id: string): Promise<recipe> {
+    return fetch(
+      `https://669a424b9ba098ed61fef5da.mockapi.io/Recipes/${id}`
+    ).then((res) => res.json());
+  }
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
   getAllRecipesP(): Promise<recipe[]> {
     return fetch('https://669a424b9ba098ed61fef5da.mockapi.io/Recipes').then(
       (res) => res.json()
     );
   }
+<<<<<<< HEAD
 
   deleteRecipeP(item: recipe) {
     // let idx = this.recipeData.indexOf(item);
@@ -268,4 +349,25 @@ export class RecipeDataService {
       }
     ).then((res) => res.json());
   }
+=======
+  
+
+  
+  addRecipe(newRecipe: NewRecipe) {
+
+    // Post
+    // 1. method
+    // 2. body - Data & JSON
+    // 3. Header - JSON
+
+    return fetch(`https://669a424b9ba098ed61fef5da.mockapi.io/Recipes`, {
+      method: 'POST',
+      body: JSON.stringify(newRecipe),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }).then((res) => res.json());
+  }
+
+>>>>>>> 9050d5189cd95b9db009218258df737037c69678
 }
