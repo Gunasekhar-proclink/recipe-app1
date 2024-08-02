@@ -12,6 +12,7 @@ import { NewRecipe } from '../../recipe';
 import { IRecipe } from '../app.component';
 import { RecipeDataService } from '../recipe-data.service';
 import { Router } from '@angular/router';
+import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   selector: 'app-add-recipe',
@@ -21,6 +22,7 @@ import { Router } from '@angular/router';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatRadioModule,
   ],
   templateUrl: './add-recipe.component.html',
   styleUrl: './add-recipe.component.scss',

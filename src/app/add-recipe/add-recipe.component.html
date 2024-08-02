@@ -40,12 +40,18 @@
     <mat-error>Please start with https:// 😁</mat-error>
     }
   </mat-form-field>
-
+<!-- 
   <mat-form-field>
     <mat-label>Item Type</mat-label>
     <input matInput placeholder="Hi" formControlName="itemType" />
     <mat-error>Type is <strong>required</strong></mat-error>
-  </mat-form-field>
+  </mat-form-field> -->
+
+  <mat-radio-group aria-label="Select an option" formControlName="type">
+    <mat-label>Select Item Type : </mat-label>
+    <mat-radio-button value="veg">Veg</mat-radio-button>
+    <mat-radio-button value="Non-Veg">Non-Veg</mat-radio-button>
+  </mat-radio-group>
 
   <mat-form-field>
     <mat-label>Item Duration</mat-label>
