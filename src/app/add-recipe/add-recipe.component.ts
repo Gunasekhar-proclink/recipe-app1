@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { NewRecipe } from '../../recipe';
-import { Irecipies } from '../app.component';
+import { IRecipe } from '../app.component';
 import { RecipeDataService } from '../recipe-data.service';
 import { Router } from '@angular/router';
 
@@ -26,7 +26,7 @@ import { Router } from '@angular/router';
   styleUrl: './add-recipe.component.scss',
 })
 export class AddRecipeComponent {
-  movies: Array<Irecipies> = [];
+  movies: Array<IRecipe> = [];
   recipeForm: FormGroup;
 
   constructor(

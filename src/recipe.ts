@@ -1,3 +1,3 @@
-import { Irecipies } from "./app/app.component";
+import { IRecipe } from "./app/app.component";
 
-export type NewRecipe = Omit<Irecipies, 'id'>;
+export type NewRecipe = Omit<IRecipe, 'id'>;
